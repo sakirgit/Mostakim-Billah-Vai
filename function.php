@@ -5,15 +5,6 @@
 * =================== */
 function skr_prod_cats_thumb_nav( $atts ) {
 
-	// Attributes
-	$atts = shortcode_atts(
-		array(
-			'id' => '',
-		),
-		$atts,
-		'link-to-post'
-	);
-
     $cate = get_queried_object();
     $cateID = $cate->term_id;
 
@@ -60,3 +51,4 @@ function skr_custom_menu() {
     register_nav_menu('category_primary_nav',__( 'Category primary nav' ));
 }
 add_action( 'init', 'skr_custom_menu' );
+
